@@ -11,4 +11,3 @@ RUN apk del temp
 COPY scripts/* /root/
 CMD ["/root/setup.sh"]
 
-

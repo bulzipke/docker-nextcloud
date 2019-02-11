@@ -7,8 +7,7 @@ This image is just for me.
 ```console
 $ docker run \
 --link mariadb:mariadb --link redis:redis \
--v /your_path/:/var/www/html \
--v /your_path:/data \
+-v /your_path:/var/www/html \
 -d bulzipke/nextcloud
 ```
 

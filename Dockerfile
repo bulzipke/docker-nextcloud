@@ -1,4 +1,4 @@
-FROM nextcloud:fpm-alpine:latest
+FROM nextcloud:fpm-alpine
 MAINTAINER bulzipke <bulzipke@naver.com>
 
 RUN apk update && apk upgrade

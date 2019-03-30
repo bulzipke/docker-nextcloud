@@ -1,7 +1,8 @@
 FROM wonderfall/nextcloud:latest
 MAINTAINER bulzipke <bulzipke@naver.com>
 
-ENV ConfigName=".rclone.conf" \
+ENV ConfigDir="/rclone" \
+    ConfigName=".rclone.conf" \
     UnmountCommands="-u -z"
 
 ## Alpine with Go Git

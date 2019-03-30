@@ -13,5 +13,8 @@ RUN apk add --no-cache --update alpine-sdk ca-certificates go git fuse fuse-dev 
     && apk del alpine-sdk go git \
     && rm -rf /tmp/* /var/cache/apk/* /var/lib/apk/lists/*
 
+RUN mkdir /.cache
+RUN chmod 777 /.cache
+
 COPY rootfs /
 

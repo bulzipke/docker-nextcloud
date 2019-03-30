@@ -16,7 +16,7 @@ RUN apk add --no-cache --update alpine-sdk ca-certificates go git fuse fuse-dev 
 
 RUN sed -i 's/#user_allow_other/user_allow_other/g' /etc/fuse.conf
 
-RUN echo "nextcloud:x:1000:1000:nextcloud:/dev/null:/sbin/nologin" >> /etc/passwd
+RUN echo "nextcloud:x:1000:1000:nextcloud:/:/sbin/nologin" >> /etc/passwd
 RUN echo "nextcloud:x:1000:" >> /etc/group
 
 RUN mkdir /.cache

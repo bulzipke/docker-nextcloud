@@ -1,7 +1,8 @@
 FROM wonderfall/nextcloud:latest
 MAINTAINER bulzipke <bulzipke@naver.com>
 
-ENV ConfigDir="/rclone" \
+ENV UID=1000 GID=1000 \
+    ConfigDir="/rclone" \
     ConfigName=".rclone.conf" \
     UnmountCommands="-u -z"
 
@@ -14,6 +15,9 @@ RUN apk add --no-cache --update alpine-sdk ca-certificates go git fuse fuse-dev 
     && rm -rf /tmp/* /var/cache/apk/* /var/lib/apk/lists/*
 
 RUN sed -i 's/#user_allow_other/user_allow_other/g' /etc/fuse.conf
+
+RUN echo "nextcloud:x:1000:1000:nextcloud:/dev/null:/sbin/nologin" >> /etc/passwd
+RUN echo "nextcloud:!::0:::::" >> /etc/group
 
 RUN mkdir /.cache
 RUN chmod 777 /.cache

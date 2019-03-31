@@ -11,9 +11,12 @@ RUN apt-get install -y fuse unzip
 RUN sed -i "2i/mount.sh &" /entrypoint.sh
 RUN sed -i 's/#user_allow_other/user_allow_other/g' /etc/fuse.conf
 
+WORKDIR /root
 RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
-RUN unzip /rclone-current-linux-amd64.zip
-RUN mv /rclone-*-linux-amd64/rclone /usr/bin/
+RUN pwd
+RUN ls -l
+RUN unzip rclone-current-linux-amd64.zip
+RUN mv rclone-*-linux-amd64/rclone /usr/bin/
 RUN chown root:root /usr/bin/rclone
 RUN chmod 755 /usr/bin/rclone
 

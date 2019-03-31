@@ -11,6 +11,8 @@ RUN apt-get install -y rclone fuse
 RUN sed -i "2i/mount.sh &" /entrypoint.sh
 RUN sed -i 's/#user_allow_other/user_allow_other/g' /etc/fuse.conf
 
+mkdir -p /data
+
 # RUN echo "nextcloud:x:1000:1000:nextcloud:/root:/sbin/nologin" >> /etc/passwd
 # RUN echo "nextcloud:x:1000:" >> /etc/group
 

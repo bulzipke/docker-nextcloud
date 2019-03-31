@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # script from https://github.com/Mumie-hub/docker-services
 

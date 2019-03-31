@@ -6,7 +6,7 @@ ENV ConfigDir="/rclone" \
     UnmountCommands="-u -z"
 
 RUN apt-get update
-RUN apt-get install rclone fuse
+RUN apt-get install -y rclone fuse
 
 RUN sed -i "2i/mount.sh &" /entrypoint.sh
 RUN sed -i "3i" /entrypoint.sh

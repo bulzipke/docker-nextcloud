@@ -21,5 +21,6 @@ RUN chmod 755 /usr/bin/rclone
 
 RUN mkdir -p /data
 
-COPY *.sh /
+COPY rootfs /
+RUN ln -s /etc/apache2/sites-available/001-download.conf /etc/apache2/sites-enabled/
 

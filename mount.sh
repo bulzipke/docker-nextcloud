@@ -37,3 +37,4 @@ echo "rclone crashed at: $(date +%Y.%m.%d-%T)"
 fuse_unmount
 
 exit $?
+

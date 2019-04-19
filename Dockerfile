@@ -9,6 +9,7 @@ RUN apt-get update
 RUN apt-get install -y fuse unzip
 
 RUN sed -i "2i/mount.sh &" /entrypoint.sh
+RUN sed -i "6iListen 8080" /etc/apache2/ports.conf
 RUN sed -i 's/#user_allow_other/user_allow_other/g' /etc/fuse.conf
 
 WORKDIR /root

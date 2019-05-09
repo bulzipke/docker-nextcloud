@@ -3,10 +3,12 @@ MAINTAINER bulzipke <bulzipke@naver.com>
 
 ENV ConfigDir="/rclone" \
     ConfigName=".rclone.conf" \
-    UnmountCommands="-u -z"
+    UnmountCommands="-u -z" \
+    OCC_MEMORY_LIMIT=1g \
+    CRON_MEMORY_LIMIT=1g
 
 RUN apt-get update
-RUN apt-get install -y fuse unzip
+RUN apt-get install -y fuse unzip gosu
 
 RUN sed -i "2i/mount.sh &" /entrypoint.sh
 RUN sed -i "6iListen 8080" /etc/apache2/ports.conf

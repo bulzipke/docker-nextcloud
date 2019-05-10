@@ -1,3 +1,0 @@
-#!/bin/bash
-gosu www-data php -d memory_limit=$OCC_MEMORY_LIMIT -f /var/www/html/occ "$@"
-

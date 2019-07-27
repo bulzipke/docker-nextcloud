@@ -24,4 +24,4 @@ RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
     mv rclone-*-linux-amd64/rclone /usr/bin/ && \
     rm -rf rclone* && \
     chown root:root /usr/bin/rclone && \
-    chmod 755 /usr/bin/rclone && \
+    chmod 755 /usr/bin/rclone

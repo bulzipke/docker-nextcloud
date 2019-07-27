@@ -1,5 +1,6 @@
 # docker-nextcloud
-Nextcloud Docker image based on Wonderfall/docker-nextcloud with rclone mount
+[![](https://images.microbadger.com/badges/version/bulzipke/nextcloud.svg)](https://microbadger.com/images/bulzipke/nextcloud) [![](https://images.microbadger.com/badges/image/bulzipke/nextcloud.svg)](https://microbadger.com/images/bulzipke/nextcloud)
+Nextcloud Docker image based on Wonderfall/docker-nextcloud
 
 This image is just for me.
 
